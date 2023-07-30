@@ -156,7 +156,7 @@ class AnimateDiffScript(scripts.Script):
 
 def on_ui_settings():
     section = ('animatediff', "AnimateDiff")
-    shared.opts.add_option("animatediff_model_path", shared.OptionInfo(os.path.join(script_dir, "model"), "Path to save AnimateDiff motion modules", gr.Textbox, section=section))
+    shared.opts.add_option("animatediff_model_path", shared.OptionInfo(os.path.join("/content/drive/MyDrive/StableDiffusion", "model"), "Path to save AnimateDiff motion modules", gr.Textbox, section=section))
     shared.opts.add_option("animatediff_check_hash", shared.OptionInfo(True, "Check hash for motion modules. Disable checking if you want to use your own.", gr.Checkbox, section=section))
 
 
