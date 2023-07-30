@@ -71,7 +71,7 @@ class AnimateDiffScript(scripts.Script):
         return enable, loop_number, video_length, fps, model
     
     def inject_motion_modules(self, p: StableDiffusionProcessing, model_name="mm_sd_v15.ckpt"):
-        model_path = os.path.join(os.path.join("/content/drive/MyDrive/StableDiffusion", "model"), model_name)
+        model_path = "/content/drive/MyDrive/StableDiffusion/Model/" + model_name
         if not os.path.isfile(model_path):
             raise RuntimeError("Please download models manually.")
         if AnimateDiffScript.motion_module is None or AnimateDiffScript.motion_module.mm_type != model_name:
